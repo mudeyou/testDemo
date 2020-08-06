@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="form">
+        <!-- 顶部二维码 -->
+        <div class="login-top">
+            <div class="icon-qrcode">
+                <img src="./img/icon-qrcode.png" alt="" class="select">
+                <img src="./img/icon-qrcode-1.png" alt="" class="">
+            </div>
+        </div>
+
+        <!-- 顶部二维码扫码页面 -->
+        <div id="" class="qrcode-top">
+            <p class="a">二维码登录</p>
+            <img src="./img/qrcode-top.png" alt="">
+            <div class="b">
+                <p>请打开豆瓣客户端扫一扫</p>
+            </div>
+        </div>
+        <div id="choose" class="login-choose">
+            <!-- 短信注册、登录 -->
+            <div class="form-top">
+                <div class="logon clear">
+                    <span class="left selected">短信注册/登录</span>
+                    <span class="left ">密码登录</span>
+                </div>
+            </div>
+            <!-- 中间区域 -->
+            <div class="container">
+                <div class="login-a">
+                    <p>请仔细阅读 <a>豆瓣使用协议、隐私政策</a></p>
+                    <form action="">
+                        <div class="input">
+                            <input type="text" placeholder="手机号">
+                            <div class="code">
+                                +86
+                            </div>
+                        </div>
+                        <div class="input">
+                            <input type="password" placeholder="验证码">
+                            <div class="yanzhengma">
+                                获取验证码
+                            </div>
+                        </div>
+                        <button class="button">登录豆瓣</button>
+                        <div class="label clear">
+                            <label for="">
+                                <input type="checkbox">
+                                下次自动登录
+                                <a class="dont-yanzhengma right">收不到验证码</span>
+                            </label>
+                        </div>
+                </div>
+                <div class="login-b selected">
+                    <p><a href="" class="right">找回密码</a></p>
+                    <form action="">
+                        <div class="input">
+                            <input type="text" placeholder="手机号/邮箱">
+                        </div>
+                        <div class="input">
+                            <input type="password" placeholder="密码">
+                        </div>
+                        <button class="button">登录豆瓣</button>
+                        <div class="label clear">
+                            <label for="">
+                                <input type="checkbox">
+                                下次自动登录
+                                <a class="out-login right">海外手机登录</span>
+                            </label>
+                        </div>
+                </div>
+            </div>
+                </form>
+            </div>
+            <!-- 第三方登录 -->
+            <div class="login-c">
+                <p>第三方登录:</p>
+                <span class="iconfont icon-weixin"></span>
+                <span class="iconfont icon-weibo1"></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

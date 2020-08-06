@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #test{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+
+    <script>
+        var oDiv = document.getElementById('test');
+        var oBody = document.getElementsByTagName('body')[0];
+
+        function moveEvent(ele, body) {
+            var x,y,disL,disT,L,T;
+            var flag = false;
+
+            ele.onmousedown = function(e) {
+                flag = true;
+                var event = e || window.event;
+                x = event.clientX;
+                y = event.clientY;
+                L = ele.offsetLeft;
+                T = ele.offsetTop;
+                disL = x - L;
+                disT = y - T;
+            };
+
+            body.onmousemove = function(e) {
+                var event = e || window.event;
+                if(flag){
+                    oDiv.style.left = event.clientX - disL + 'px';
+                    oDiv.style.top = event.clientY - disT + 'px';
+                }   
+            };
+
+            ele.onmouseup = function(e) {
+                flag = false;
+            }
+        }
+
+        moveEvent(oDiv, oBody);
+
+        
+    </script>
+</body>
+</html>

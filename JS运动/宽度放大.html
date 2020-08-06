@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        var oDiv = document.getElementsByTagName('div');
+        var timer = null;
+
+        for(var i = 0; i < oDiv.length; i++){
+            oDiv[i].onmouseenter = function(){
+                moveDom(this, 500);
+            };
+
+            oDiv[i].onmouseleave = function() {
+                moveDom(this, 100);
+            }
+        }
+
+        function moveDom(obj, target) {
+            clearInterval(obj.timer);
+            var speed = 0;
+            obj.timer = setInterval(function() {
+                speed = (target - obj.offsetWidth) / 7;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if(obj.offsetWidth == target){
+                    clearInterval(obj.timer);
+                }else{
+                    obj.style.width = obj.offsetWidth + speed + 'px';
+                }
+            }, 30)
+        }
+    </script>
+</body>
+</html>

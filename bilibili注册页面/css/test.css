@@ -1,0 +1,233 @@
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header{
+    width: 100%;
+    background-color:#00a0d8;
+    height: 86px;
+}
+
+.header .header-img{
+    width: 971px;
+    height: 109px;
+    background-image: url(../img/test.png);
+    background-size: cover;
+    background-position: bottom center;
+    margin: 0 auto;
+}
+
+.cantainer {
+    width:930px;
+    margin: 30px auto;
+}
+
+.cantainer .title h2{
+    font-size: 38px;
+    height: 21px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 80px;
+}
+
+.cantainer .title h2 span{
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+/*  */
+.cantainer .form-area{
+    width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cantainer .form-area .text .erro{
+    position: absolute;
+    top: 13px;
+    right: -91px;
+    color: #f45d90;
+    font-size: 12px;
+    display: none;
+}
+
+.cantainer .form-area .text.haserro .erro{
+    display: block;
+}
+
+
+.cantainer .text{
+    margin: 38px 0;
+}
+.cantainer .text1{
+    margin: 38px 0;
+}
+.cantainer .text2{
+    margin: 38px 0 0 0;
+}
+.cantainer .form-area .text1 .left{
+    position: relative;
+}
+
+.cantainer .form-area .text1 .left .choose{
+    float: left;
+    width: 120px;
+    height: 38px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid #dcdfe6;
+    border-radius:5px 0 0 5px;
+    color: #909399;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cantainer .form-area .text1 .left ul{
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    background:#fff;
+    border-radius: 5px;
+    top: 48px;
+    border: 1px solid #dcdfe6;
+    padding: 3px 0;
+    overflow-y: auto;
+    display: none;
+    z-index: 1;
+}
+.cantainer .form-area .text1 .left ul li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin: 1px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.cantainer .form-area .text1 .left ul li.select{
+    color: #00a1d6;
+    font-weight: bold;
+}
+.cantainer .form-area .text1 .left ul li:hover{
+    background-color: #dddddd;
+
+}
+
+.cantainer .form-area .text1 .right input{
+    float: left;
+    width: 300px;
+    height: 38px;
+    border-radius:0px 5px 5px 0;
+    box-sizing: border-box;
+}
+
+.cantainer .form-area .text2{
+    position: relative;
+}
+.cantainer .form-area .text2 .right button{
+    position:absolute;
+    width: 120px;
+    height: 34px;
+    background-color: #00a1d6;
+    left: 298px;
+    top: 2px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cantainer .form-area .radio{
+    height: 38px;
+    font-size: 12px;
+    line-height: 38px;
+    position: relative;
+    padding-left: 25px;
+}
+.cantainer .form-area .radio input[type="radio"]{
+    display:none;
+}
+
+.cantainer .form-area .radio .radio-item{
+    display: inline-block;
+    width:13px;
+    height: 13px;
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.cantainer .form-area .radio input:checked+.radio-item{
+    border: 1px solid #00a1d6;
+}
+
+.cantainer .form-area .radio input:checked+.radio-item::after{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 2px auto;
+    border-radius: 2px;
+    background: #00a1d6;
+}
+.cantainer .form-area .radio a{
+    color: #00a1d6;
+}
+
+.cantainer .form-area .register button{
+    width: 100%;
+    height: 40px;
+    background: #00a1d6;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.cantainer .form-area .login{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 100px;
+}
+
+.cantainer .form-area .login a{
+    font-size: 12px;
+    color: #00a1d6;
+}
+input[type="text"],input[type="password"]{
+    border: 1px solid #dcdfe6;
+    font-size: 14px;
+    width: 100%;
+    padding: 0 12px;
+    border-radius: 5px;
+    height: 38px;
+    display: inline-block;
+    color: #6a6062;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{
+    border: 1px solid #00a1d6;
+}
+input[type="text"]::placeholder,input[type="password"]::placeholder{
+    color: #ccc;
+}
+
+.cantainer .form-area .register button:disabled{
+    background: #f5f5f5;
+    color: rgba(0,0,0,.25);
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    cursor: not-allowed;
+}
+
+
+
+

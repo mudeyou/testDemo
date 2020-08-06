@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        button {
+            margin-top: 150px;
+        }
+
+        span {
+            width: 1px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 500px;
+            background-color: black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button id='btn'>run</button>
+    <span></span>
+
+    <script>
+        var oDiv = document.getElementsByTagName('div')[0];
+        var oBtn = document.getElementById('btn');
+        var speed = 10;
+        var timer = null;
+        var flag = true;
+
+        oBtn.onclick = function () {
+            domMove(oDiv);
+        }
+
+        function domMove(obj) {
+            if (flag) {
+                timer = setInterval(function () {
+                    speed = (500 - obj.offsetLeft) / 7;
+                    if (obj.offsetLeft >= 500) {
+                        obj.style.left = '500px';
+                        clearInterval(timer);
+                    }
+                    if (speed > 0) {
+                        speed += 1;
+                    }
+                    obj.style.left = obj.offsetLeft + speed + 'px';
+                }, 30)
+                flag = false;
+                oBtn.innerText = 'stop';
+            } else {
+                oBtn.innerText = 'run';
+                clearInterval(timer);
+                flag = true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

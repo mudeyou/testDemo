@@ -1,0 +1,177 @@
+.main{
+    line-height: 1.5;
+}
+.test{
+    position: relative;
+}
+.test .top{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.test .top .logo a{
+    float: left;
+    margin-left: 77px;
+    margin-right: 50px;
+}
+
+.test .top .top-nav li a{
+    float: left;
+    width: 70px;
+    text-align: center;
+    line-height: 78px;
+}
+.test .top .top-nav li img{
+    margin-left: 70px;
+}
+.test .top .top-nav li:hover{
+    color: red;
+}
+
+.test .top .top-nav li a.select{
+    background-color: red;
+    color:#fff;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.main{
+    margin-top:78px;
+}
+
+.main .nav{
+    background: #47464a;
+    width: 100%;
+    height: 60px;
+    min-width: 1200px;
+    text-align: center;
+    line-height: 60px;
+    color: #999;
+}
+
+.nav a{
+    margin: 0px 45px;
+}
+
+.nav a:hover{
+    color: #fff;
+}
+
+.nav a.select{
+    color: #ef4238;
+}
+
+.main .container{
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.main .container .choose-area{
+    border: 1px solid #e5e5e5;
+    padding: 0 35px;
+    margin: 40px 0;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.main .container .choose-area .choose-item{
+    margin: 1em 0;
+    border-bottom: 1px dotted #e5e5e5;
+}
+
+.main .container .choose-area .choose-item.no-border{
+    border:none;
+
+}
+.main .container .choose-area .choose-item .left{
+    float: left;
+    color: #999;
+}
+
+.main .container .choose-area .choose-item .right{
+    float: right;
+    width: 1000px;
+}
+
+.main .container .choose-area .choose-item .right a{
+    margin: 10px 8px;
+    padding: 0 5px;
+}
+
+.main .container .choose-area .choose-item .right a.select{
+    background-color: red;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.main .container .choose-area .choose-item a:hover{
+    color: red;
+}
+
+/* .main .container .movies{
+    padding: 10px 0;
+} */
+
+.main .container .movies .movie-item{
+    float: left;
+    width: 162px;
+    margin: 20px 29px 10px 0;
+}
+.main .container .movies .movie-item:nth-child(6n){
+    margin-right: 0;
+}
+.main .container .movies .movie-item .poster img{
+    width: 162px;
+    height: 222px;
+    padding: 5px;
+}
+
+.main .container .movies .movie-item .name{
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main .container .movies .movie-item .score{
+    color: #ffb400;
+    text-align: center;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.main .container .movies .movie-item .score::first-letter{
+    font-size: 1.5em;
+}
+
+.main .container .page{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main .container .page a{
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    width: 35px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 1px;
+}
+
+.main .container .page a:hover{
+    border: 1px solid red;
+}
+.main .container .page a.first{
+    width: 74px;
+}
+.main .container .page a.select{
+    background-color: red;
+    color: #fff;
+    border: 1px solid red;
+}

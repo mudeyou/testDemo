@@ -1,0 +1,218 @@
+@import "reset.css";
+@import "common.css";
+
+#choose{
+    display: block;
+}
+/* 头部分开始 */
+.form{
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.form .login-top{
+    margin-top: 18px;
+    position: relative;
+}
+
+.form .login-top img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: -20px;
+    display: none;
+    cursor: pointer;
+}
+.form .login-top img.select{
+    display: block;
+}
+
+.form .qrcode-top{
+    display: none;
+}
+
+.form .qrcode-top .a{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    color: #333;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #ececec;
+}
+.form .qrcode-top img{
+    display: block;
+    width: 170px;
+    margin: 20px auto 0 auto;
+}
+.form .qrcode-top .b{
+    text-align: center;
+    width: 170px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #494949;
+    background-color: rgba(0, 0, 0, .08);
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+
+.form .login-choose{
+    display: none;
+}
+
+
+.form .form-top .logon span{
+    width: 140px;
+    line-height:2;
+    font-size: 13px;
+    color:#9b9b9b;
+    font-weight: 700;
+    border-bottom: 1px solid #ececec;
+    text-align: center;
+    cursor: pointer;
+}
+.form .form-top .logon span.selected{
+    color:#333;
+    border-bottom: 1px solid #9b9b9b;
+}
+/* 头部分结束 */
+
+/* 中间部分开始 */
+    /* 左边开始 */
+    .form .container .input{
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .form .container .login-a,.form .container .login-b{
+        display: none;
+    }
+
+    .form .container .login-a.selected,.form .container .login-b.selected{
+        display: block;
+    }
+
+
+    .form .container .login-a p,.form .container .login-b p{
+        width: 280px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 12px;
+        color: #9b9b9b;
+    }
+    .form .container .login-a p a,.form .container .login-b p a{
+        color: #41ac52;
+    }
+
+
+    .form .container .input .code{
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        width: 39px;
+        height: 16px;
+        font-size: 15px;
+        font-weight: 700;
+        border-right: 1px solid #e4e6e5;
+    }
+
+    .form .container .login-b .input input[type="text"]{
+        text-indent: 9px;
+    }
+
+    .form .container .input .yanzhengma{
+        width: 84px;
+        line-height: 35px;
+        height: 35px;
+        font-size: 13px;
+        color:#41ac52;
+        position: absolute;
+        left: 207px;
+        top: -3px;
+        cursor: pointer;
+    }
+       
+
+    .form .container .login-a .button,.form .container .login-b .button{
+        width: 280px;
+        height: 34px;
+        line-height: 34px;
+        font-weight: 400;
+        color: #fff;
+        font-size: 15px;
+        background-color: rgba(66,189,86,.5);
+        cursor: default;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+    .form .container .login-a .button.select,.form .container .login-b .button.select{
+        background-color:#41ac52;
+        cursor: pointer;
+    }
+
+
+    .form .container .login-a .label,.form .container .login-b .label{
+        width: 280px;
+        height: 20px;
+        line-height: 20px;
+        padding-bottom: 10px;
+        color: #333;
+        font-size: 13px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .form .container .login-a .label a,.form .container .login-b .label a{
+        color: #41ac52;
+        cursor: pointer;
+    }
+
+    input[type="text"],input[type="password"]{
+        width: 280px;
+        height: 31px;
+        font-size: 13px;
+        border: 1px solid #e4e6e5;
+        border-radius: 3px;
+        box-sizing: border-box;
+        text-indent: 9px;
+    }
+    input[type="text"]{
+        text-indent: 55px;
+    }
+    /* 左边结束 */
+
+/* 中间部分结束 */
+
+/* 尾部 */
+.form .login-c{
+    position: relative;
+    width: 280px;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+}
+.form .login-c p{
+    font-size: 13px;
+    color: #9b9b9b;
+    margin-top: 5px;
+}
+.form .login-c span{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.form .login-c .iconfont.icon-weixin{
+    left: 78px;
+    top: 2px;
+    color: #41ac52;
+    font-size: 25px;
+}
+.form .login-c .iconfont.icon-weibo1{
+    left: 118px;
+    top: 2px;
+    color: indianred;
+    font-size: 25px;
+}   

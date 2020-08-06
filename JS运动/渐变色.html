@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #007c7c;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        var timer = null;
+        var oDiv = document.getElementsByTagName('div')[0];
+
+        function getStyle(obj, prop) {
+            if(window.getComputedStyle){
+                return window.getComputedStyle(obj, null)[prop];
+            }else{
+                return obj.currentStyle[prop];
+            }
+        }
+
+        function colorChange(obj, target) {
+            target = target * 100;
+            clearInterval(timer);
+            var speed = 0;
+            var icd = 0;
+            timer = setInterval(function(){
+                icd = parseFloat(getStyle(obj, 'opacity'))*100;
+                speed = (target - icd) / 7;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if(icd/100 == target){
+                    clearInterval(timer);
+                }else{
+                    obj.style.opacity = (icd + speed) /100;
+                }
+            }, 30)
+        }
+
+        oDiv.onclick = function() {
+            colorChange(this, 0.2)
+        }
+    </script>
+</body>
+
+</html>
