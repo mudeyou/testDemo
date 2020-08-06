@@ -22,9 +22,15 @@
     <script>
         var oDiv = document.getElementById('test');
 
-        function moveEvent(ele) {
+        function moveEvent(ele, body) {
             var x,y,disL,disT,L,T;
             var flag = false;
+
+            manageCookie.getCookie('width', function(data) {
+                oDiv.style.left = data;
+            }).getCookie('height', function(data) {
+                oDiv.style.top = data;
+            });
 
             ele.onmousedown = function(e) {
                 flag = true;
@@ -46,7 +52,30 @@
             };
 
             ele.onmouseup = function(e) {
+                manageCookie.setCookie('width',oDiv.style.left,100000);
+                manageCookie.setCookie('height',oDiv.style.top,100000);
                 flag = false;
+            }
+        }
+
+        var manageCookie = {
+            setCookie: function(name, value, time) {
+                document.cookie = name + '=' + value + ";max-age=" + time;
+                return this;
+            },
+            removeCookie: function(name) {
+                return this.setCookie(name,'',-1);
+            },
+            getCookie: function(name, callback) {
+                var cookies = document.cookie.split(';'); 
+                for(var i = 0; i < cookies.length; i++){
+                    var cookieName = cookies[i].trim().split('=');
+                    if(cookieName[0] == name){
+                        callback(cookieName[1]);
+                        return this;
+                    }
+                }
+                return this;
             }
         }
 
